@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 
 export const Statistics = ({
@@ -33,4 +34,14 @@ export const Statistics = ({
       )}
     </div>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+  feedbackGiven: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
 };
